@@ -115,22 +115,22 @@ export default function Home() {
             <h2 className="mb-4 text-2xl font-bold">Documentation</h2>
             <div className="grid gap-4 sm:grid-cols-2">
               <DocLink
-                href="/docs/API_SPEC.md"
+                href="/docs/api-specification"
                 title="API Specification"
                 description="Complete endpoint documentation and request/response formats"
               />
               <DocLink
-                href="/docs/DEPLOYMENT.md"
+                href="/docs/deployment"
                 title="Deployment Guide"
                 description="Production setup, monitoring, and security hardening"
               />
               <DocLink
-                href="/docs/ANDROID_INTEGRATION.md"
+                href="/docs/android-integration"
                 title="Android Integration"
                 description="Client implementation with certificate pinning and HMAC"
               />
               <DocLink
-                href="/docs/README.md"
+                href="/docs/readme"
                 title="Project README"
                 description="Overview, quick start, and troubleshooting"
               />
