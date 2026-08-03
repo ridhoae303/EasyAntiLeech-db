@@ -618,30 +618,22 @@ See **API_SPEC.md** for complete troubleshooting guide.
 
 **Found a vulnerability?**
 
-Please report security issues to: `security@your-domain.com`
+Please report security issues to: `ridhooffweb@gmail.com`
 
 Do not open public issues for security vulnerabilities.
-
----
-
-## License
-
-MIT License - See LICENSE file
 
 ---
 
 ## Support
 
 - 📖 **Documentation:** See `/docs` directory
-- 🐛 **Issues:** GitHub Issues
-- 💬 **Discussions:** GitHub Discussions
-- 📧 **Email:** support@your-domain.com
+- 📧 **Email:** ridhoweb303@gmail.com
 
 ---
 
 ## Changelog
 
-### v1.0.0 (2024-01-15)
+### v1.0.0
 - Initial production release
 - HMAC authentication
 - Nonce validation
