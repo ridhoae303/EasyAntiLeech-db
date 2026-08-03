@@ -2,7 +2,11 @@ import crypto from 'crypto'
 import HmacSHA256 from 'crypto-js/hmac-sha256'
 import Hex from 'crypto-js/enc-hex'
 
-const HMAC_SECRET = process.env.HMAC_SECRET || 'dev-secret-key'
+if (!process.env.HMAC_SECRET) {
+  throw new Error('HMAC_SECRET environment variable is required for production')
+}
+
+const HMAC_SECRET = process.env.HMAC_SECRET
 const REQUEST_TIMEOUT_MS = 5 * 60 * 1000 // 5 minutes
 const NONCE_TTL_MS = 10 * 60 * 1000 // 10 minutes
 

@@ -2,9 +2,12 @@ const HmacSHA256 = require('crypto-js/hmac-sha256');
 const Hex = require('crypto-js/enc-hex');
 const crypto = require('crypto');
 
-const HMAC_SECRET = process.env.HMAC_SECRET || 'dev-secret-key';
+if (!process.env.HMAC_SECRET) {
+  console.error('Error: HMAC_SECRET environment variable is required');
+  process.exit(1);
+}
 
-console.log('Using HMAC_SECRET:', HMAC_SECRET);
+const HMAC_SECRET = process.env.HMAC_SECRET;
 
 // Generate test payload - NOTE: Must match the order used in the backend verify endpoint
 const payloadForHmac = {
