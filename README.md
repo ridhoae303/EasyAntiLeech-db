@@ -646,6 +646,5 @@ Do not open public issues for security vulnerabilities.
 - Rate limiting support
 - Replay attack protection
 
----
 
 **Built with security as the first priority.**
