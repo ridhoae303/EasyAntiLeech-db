@@ -2,10 +2,14 @@ const HmacSHA256 = require('crypto-js/hmac-sha256');
 const Hex = require('crypto-js/enc-hex');
 const crypto = require('crypto');
 
-const HMAC_SECRET = process.env.HMAC_SECRET || 'dev-secret-key';
+if (!process.env.HMAC_SECRET) {
+  console.error('Error: HMAC_SECRET environment variable is required');
+  process.exit(1);
+}
+
+const HMAC_SECRET = process.env.HMAC_SECRET;
 
 console.log('\n=== Android Anti-Leech Verification Test ===\n');
-console.log('HMAC_SECRET:', HMAC_SECRET.substring(0, 10) + '...');
 
 // Test 1: Valid request with correct HMAC
 async function testValidRequest() {
